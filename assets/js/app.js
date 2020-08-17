@@ -22624,7 +22624,12 @@ __webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dis
 //import './lib/foundation-explicit-pieces';
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); // validacion 11 digitos input type number formulario de contacto
+
+var input = document.getElementById('telefono');
+input.addEventListener('input', function () {
+  if (this.value.length > 11) this.value = this.value.slice(0, 11);
+});
 
 function changeClass() {
   document.getElementById("menu-hamburger").classList.toggle("is-active");
